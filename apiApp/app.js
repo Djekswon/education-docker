@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/contacts', (req, res) => {
+  res.send('Contacts')
+})
+
 app.get("/error", function (req, res){
   res.status(404).send("NotFound");
 });
