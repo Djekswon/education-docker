@@ -9,6 +9,13 @@ it("should return Hello World", function (done) {
     .end(done);
 });
 
+it("should return Contacts", function (done) {
+  request(app)
+    .get("/contacts")
+    .expect("Contacts")
+    .end(done);
+});
+
 it("should return NotFound with status 404", function (done) {
   request(app)
     .get("/error")
