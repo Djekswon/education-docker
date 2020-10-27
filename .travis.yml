@@ -17,6 +17,8 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r $TRAVIS_BUILD_DIR worker@159.65.118.249:web/education-docker
+  script: 
+  - rsync -r $TRAVIS_BUILD_DIR worker@159.65.118.249:web/education-docker 
+  - ssh worker@159.65.118.249 'cd web/education-docker && docker-compose up -d --build'
   on:
-    branch: master
+    branch: main
