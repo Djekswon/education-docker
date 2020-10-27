@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - '12'
+
+before_script: 
+  - cd apiApp
+
+script:
+  - npm test
