@@ -2,10 +2,10 @@ const request = require("supertest");
 
 var app = require("./app").app;
 
-it("should return Hello World", function (done) {
+it("should return Hello World Abs", function (done) {
   request(app)
     .get("/")
-    .expect("Hello World!")
+    .expect("Hello World Abs!")
     .end(done);
 });
 
