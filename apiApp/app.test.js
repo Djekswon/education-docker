@@ -16,6 +16,13 @@ it("should return Contacts", function (done) {
     .end(done);
 });
 
+it("should return Page", function (done) {
+  request(app)
+    .get("/page")
+    .expect("Page")
+    .end(done);
+});
+
 it("should return NotFound with status 404", function (done) {
   request(app)
     .get("/error")

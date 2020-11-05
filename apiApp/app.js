@@ -11,6 +11,10 @@ app.get('/contacts', (req, res) => {
   res.send('Contacts')
 })
 
+app.get('/page', (req, res) => {
+  res.send('Page')
+})
+
 app.get("/error", function (req, res){
   res.status(404).send("NotFound");
 });
